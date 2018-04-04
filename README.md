@@ -8,5 +8,5 @@ I intend to adjust this theme for my own purposes, and will be sharing the sourc
 ## TODO
 
 * Update this README.md to include instructions on how to use it
-* Make a separate branch for my own blog
+* **DONE** Make a separate [branch](https://github.com/aplorenzen/codedaze-theme/tree/neoprime) for my own blog
 * Update the theme to suit my own blog
