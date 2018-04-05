@@ -1,6 +1,24 @@
 {
-  "name": "codedaze",
-  "version": "0.1",
-  "author": "Chris Sainty - https://codedaze.io",
-  "description": "CodeDaze"
+  "name": "primer",
+  "version": "0.1.2",
+  "description": "Ghost theme for personal blogging, based on Chris Sainty's theme for codedaze.io (https://github.com/chrissainty/codedaze-theme)",
+  "author": {
+    "name": "Andreas Lorenzen",
+    "email": "aplorenzen@gmail.com",
+    "url": "https://neoprime.it"
+  },
+  "license": "MIT",
+  "config": {
+    "posts_per_page": 3
+  },
+  "engines": {
+        "ghost": ">=1.20.0"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+        "Minimal",
+        "Personal Blogs"
+    ]
+  }
 }
