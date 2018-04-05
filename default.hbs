@@ -24,8 +24,12 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header>
+        <header
+            {{#is "home, index, tag"}}
+                {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}});"{{/if}}
+            {{/is}}>
             <div class="hero">
+                
                 <a href="{{@blog.url}}" class="logo">
                     <img src="{{asset "img/logo.png"}}" alt="CodeDaze" />
                 </a>

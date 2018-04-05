@@ -139,7 +139,6 @@ header {
 
 .hero {
     position: relative;
-    background: url("../img/hero.jpg") center center no-repeat;
     background-size: cover;
     padding: 212px 0 212px;
     text-align: center;
