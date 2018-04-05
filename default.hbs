@@ -26,12 +26,11 @@
 
         <header
             {{#is "home, index, tag"}}
-                {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}});"{{/if}}
+                {{#if @blog.cover_image}}style="background: url({{@blog.cover_image}}) center center no-repeat; "{{/if}}
             {{/is}}>
             <div class="hero">
-                
                 <a href="{{@blog.url}}" class="logo">
-                    <img src="{{asset "img/logo.png"}}" alt="CodeDaze" />
+                    <img src={{@blog.logo}} alt="CodeDaze" />
                 </a>
                 <div class="author">
                     <img src="{{asset "img/profile-image.jpg"}}" alt="Chris Sainty" />
