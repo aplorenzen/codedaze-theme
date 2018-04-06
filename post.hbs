@@ -24,25 +24,30 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header class="post">
+        <header
+            {{#is "home, index, post, tag"}}
+                {{#if @blog.cover_image}}style="background: url({{@blog.cover_image}}) center center no-repeat; "{{/if}}
+            {{/is}}>
             <div class="hero">
                 <a href="{{@blog.url}}" class="logo">
-                    <img src="{{asset "img/logo.png"}}" alt="CodeDaze" />
+                    <img src={{@blog.logo}} alt="{{@blog.title}}" />
                 </a>
                 <div class="author">
-                    <img src="{{asset "img/profile-image.jpg"}}" alt="Chris Sainty" />
+                    <img src={{@blog.logo}} alt="{{@blog.title}}" />
                 </div>
                 <h5>
-                    Talking about ASP.NET Core & Angular
+                    {{@blog.description}}
                 </h5>
                 <ul class="social">
-                    <li><a class="icon-github" href="https://github.com/chrissainty" target="_blank" title="Fork me on Github"></a></li>
-                    <li><a class="icon-linkedin" href="https://www.linkedin.com/in/chris-sainty" target="_blank" title="LinkedIn"></a></li>
-                    <li><a class="icon-twitter" href="https://twitter.com/chris_sainty" target="_blank" title="Twitter"></a></li>
+                    <li><a class="icon-github" href="https://github.com/chrissainty" target="_blank" title="Github"></a></li>
+                    <li><a class="icon-linkedin" href="https://www.linkedin.com/in/andreas-lorenzen/" target="_blank" title="LinkedIn" rel="noopener"></a></li>
+                    {{#if @blog.twitter}}<li><a class="icon-twitter" href="{{twitter_url @blog.twitter}}" target="_blank" title="{{@blog.twitter}}" rel="noopener"></a></li>{{/if}}
+                    {{#if @blog.facebook}}<li><a class="icon-facebook-squared" href="{{facebook_url @blog.facebook}}" target="_blank" title="{{@blog.facebook}}" rel="noopener"></a></li>{{/if}}
                 </ul>   
                 <div class="hero-overlay"></div>
             </div>
         </header>
+
 
         {{#post}}
 
