@@ -141,7 +141,6 @@ header {
 
 .hero {
     position: relative;
-    background-size: cover;
     padding: 212px 0 212px;
     text-align: center;
     color: #f7f9fa;
@@ -168,7 +167,7 @@ header.post > .hero {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    border-width: 2px;
+    border-width: 4px;
     border-style: solid;
     border-color: var(--theme-primary);
     width: 118px;
@@ -372,9 +371,17 @@ nav.pagination .older-posts {
   word-wrap: break-word;
 }
 
+.read-next .prev-story section:before {
+  content: "Previous Post";    
+}
+
+.read-next .next-story section:before {
+  content: "Next Post";
+}
+
 .read-next .prev-story section:before,
 .read-next .next-story section:before {
-  content: "Previous Post";
+
   padding: 6px 10px 5px;
   text-transform: uppercase;
   font-size: 1.1rem;
@@ -388,7 +395,7 @@ nav.pagination .older-posts {
 .prev-story:hover,
 .next-story:hover {
   color: #3c3d47;
-  background: #fff;
+  background: var(--theme-primary);
   transition: all 0.2s ease;
   border-top: 5px solid var(--theme-primary);
 }
