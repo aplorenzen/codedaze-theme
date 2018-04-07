@@ -235,7 +235,7 @@ article h3 {
 }
 
 article .post-info {
-  color: #bdbdbd;
+  color: var(--faded-text);
   border-top: 1px solid rgba(38,41,58,.1);
   border-bottom: 1px solid rgba(38,41,58,.1);
   padding: 20px 0;
@@ -268,7 +268,7 @@ article .share-buttons > ul > li > a {
 }
 
 article footer {
-  color: #bdbdbd;
+  color: var(--faded-text);
   border-top: 1px solid rgba(38,41,58,.1);
   padding-top: 20px;
 }
@@ -289,24 +289,39 @@ article footer img {
 
 nav.pagination {
   position: relative;
-  padding: 35px;
   margin: 20px 0;
   text-align: center;
 }
 
 nav.pagination .page-number {
   display: inline-block;
-  color: #bdbdbd;
+  height: 45px;
+  color: var(--faded-text);
 }
 
+
 nav.pagination .newer-posts {
-  position: absolute;
-  left: 0;
+  position: relative;
+  width: 164px;
 }
 
 nav.pagination .older-posts {
-  position: absolute;
-  right: 0;
+  position: relative;
+  width: 164px;  
+}
+
+@media screen and (min-width: 580px) {
+  nav.pagination .newer-posts {
+    position: absolute;
+    left: 0;
+    margin-right: 8px;
+  }
+
+  nav.pagination .older-posts {
+    position: absolute;
+    right: 0;
+    margin-left: 8px;
+  }
 }
 
 .read-next {
