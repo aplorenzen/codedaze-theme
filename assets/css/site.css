@@ -151,11 +151,11 @@ header.post > .hero {
 }
 
 .hero a.logo {
-    width: 170px;
+    width: 64px;
     display: block;
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 32px;
+    left: 32px;
 }
 
 .hero .author {
