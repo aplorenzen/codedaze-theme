@@ -26,7 +26,7 @@
 
         <header
             {{#is "home, index, post, tag"}}
-                {{#if @blog.cover_image}}style="background: url({{@blog.cover_image}}) center center no-repeat; "{{/if}}
+                {{#if @blog.cover_image}}style="background: url({{@blog.cover_image}}) center center no-repeat; background-size: cover; height: 128px"{{/if}}
             {{/is}}>
             <div class="hero">
                 <a href="{{@blog.url}}" class="logo">
