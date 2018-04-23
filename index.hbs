@@ -1,4 +1,7 @@
 {{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
 <div class="container">
 
     {{#foreach posts}} 
@@ -14,10 +17,14 @@
                 {{/if}}
                 
         <h2 class="posts-header"><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
-        <p>{{excerpt characters="150"}}&hellip;</p>
+        <p>{{excerpt characters="256"}}&hellip;</p>
         <footer>
-          <img src="{{asset "img/profile-image.jpg"}}" alt="Chris Sainty" />
-          <span>By Chris Sainty</span>
+
+            {{#if profile_image}}
+                <a href="{{url}}" class="static-avatar"><img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" /></a>
+            {{/if}}
+
+            <span>By {{ author }}</span>
           <span class="seperator">|</span>
           Posted <span class="post-meta">
                       <time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time>
