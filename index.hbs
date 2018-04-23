@@ -20,8 +20,8 @@ into the {body} of the default.hbs template --}}
         <p>{{excerpt characters="256"}}&hellip;</p>
         <footer>
 
-            {{#if profile_image}}
-                <a href="{{url}}" class="static-avatar"><img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" /></a>
+            {{#if author.profile_image}}
+                <a href="{{author.url}}" class="static-avatar"><img class="author-profile-image" src="{{author.profile_image}}" alt="{{author.name}}" /></a>
             {{/if}}
 
             <span>By {{ author }}</span>

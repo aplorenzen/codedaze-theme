@@ -27,7 +27,7 @@
         <header
             {{#is "home"}}
                 {{#if @blog.cover_image}}style="background: url({{@blog.cover_image}}) center center no-repeat; background-size: cover;"{{/if}}
-            {{/is}}>
+            
             <div class="hero">
                 {{#if @blog.icon}}
                     <a href="{{@blog.url}}" class="logo">
@@ -49,6 +49,11 @@
                 </ul>   
                 <div class="hero-overlay"></div>
             </div>
+
+            {{else}}
+                {{#if @blog.cover_image}}style="background: url({{@blog.cover_image}}) center center no-repeat; background-size: cover; height: 128px"{{/if}}
+            {{/is}}
+
         </header>
 
         <div>
