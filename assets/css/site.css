@@ -72,7 +72,6 @@
 
   .icon-github:before {
     content: '\e80a'; }
-  
 
 body {
     background-color: #f7f9fa;
@@ -141,7 +140,7 @@ header {
 
 .hero {
     position: relative;
-    padding: 212px 0 212px;
+    padding-top: 50px;
     text-align: center;
     color: #f7f9fa;
 }
