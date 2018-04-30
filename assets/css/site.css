@@ -145,6 +145,10 @@ header {
     color: #f7f9fa;
 }
 
+.hero.post {
+  padding-top: 16px;
+}
+
 header.post > .hero {
   padding: 90px 0 50px;
 }
@@ -158,7 +162,7 @@ header.post > .hero {
 }
 
 .hero .author {
-    text-align: center;
+  text-align: center;
 }
 
 .hero .author > img {
@@ -173,6 +177,12 @@ header.post > .hero {
     height: 118px;
 }
 
+
+.hero.post .author > img {
+  width: 64px;
+  height: 64px;
+}
+
 .hero h5 {
     margin: 18px 0 0 0;
     font-weight: normal;
@@ -183,6 +193,13 @@ header.post > .hero {
     display: inline-block;
     padding: 0;
     margin: 18px 0 0 0;
+}
+
+.hero.post .social {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0px 0 0 0;
 }
 
 .hero .social > li {

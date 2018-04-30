@@ -28,16 +28,13 @@
             {{#is "home, index, post, tag"}}
                 {{#if @blog.cover_image}}style="background: url({{@blog.cover_image}}) center center no-repeat; background-size: cover; height: 128px"{{/if}}
             {{/is}}>
-            <div class="hero">
+            <div class="hero post">
                 <a href="{{@blog.url}}" class="logo">
                     <img src={{@blog.icon}} alt="{{@blog.title}}" />
                 </a>
                 <div class="author">
                     <img src={{@blog.logo}} alt="{{@blog.title}}" />
                 </div>
-                <h5>
-                    {{@blog.description}}
-                </h5>
                 <ul class="social">
                     <li><a class="icon-github" href="https://github.com/chrissainty" target="_blank" title="Github"></a></li>
                     <li><a class="icon-linkedin" href="https://www.linkedin.com/in/andreas-lorenzen/" target="_blank" title="LinkedIn" rel="noopener"></a></li>
