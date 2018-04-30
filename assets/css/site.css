@@ -154,11 +154,11 @@ header.post > .hero {
 }
 
 .hero a.logo {
-    width: 64px;
+    width: 48px;
     display: block;
     position: absolute;
-    top: 32px;
-    left: 32px;
+    top: 16px;
+    left: 16px;
 }
 
 .hero .author {
@@ -447,4 +447,19 @@ footer.main .right {
   float: right;
   margin-bottom: 0;
   font-size: 1.2rem;
+}
+
+ol {
+    margin: 0px 0;
+    padding:0;
+    list-style: decimal inside non;
+    list-style-position: initial;
+}
+
+ol li
+{
+    margin: 0px;
+    padding: px;
+    text-indent: 0.0em;
+    margin-left: 1.4em;
 }
