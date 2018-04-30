@@ -1,3 +1,5 @@
+@import "global.css";
+
 @font-face {
     font-family: 'fontello';
     src: url("../font/fontello.eot?40607460");
@@ -70,7 +72,6 @@
 
   .icon-github:before {
     content: '\e80a'; }
-  
 
 body {
     background-color: #f7f9fa;
@@ -85,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   
 a {
     text-decoration: none;
-    color: #ff6600;
+    color: var(--theme-primary);
     transition: all 0.3s ease; 
 }
 
@@ -110,22 +111,22 @@ nav img {
 }
 
 .button {
-  border-color: #ff6600;
+  border-color: var(--theme-primary);
 }
 
 .button.button-outline {
-  color: #ff6600;
+  color: var(--theme-primary);
 }
 
 blockquote {
   font-weight: bold;
   font-size: 1.8rem;
   font-style: italic;
-  border-left: 6px solid #ff6600;
+  border-left: 6px solid var(--theme-primary);
 }
 
 pre {
-  border-left-color: #ff6600;
+  border-left-color: var(--theme-primary);
 }
 
 em > strong {
@@ -134,15 +135,18 @@ em > strong {
 
 header {
   margin-bottom: 50px;
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid var(--theme-primary);
 }
 
 .hero {
     position: relative;
-    background-size: cover;
-    padding: 212px 0 212px;
+    padding-top: 50px;
     text-align: center;
     color: #f7f9fa;
+}
+
+.hero.post {
+  padding-top: 16px;
 }
 
 header.post > .hero {
@@ -150,15 +154,15 @@ header.post > .hero {
 }
 
 .hero a.logo {
-    width: 170px;
+    width: 48px;
     display: block;
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 16px;
+    left: 16px;
 }
 
 .hero .author {
-    text-align: center;
+  text-align: center;
 }
 
 .hero .author > img {
@@ -166,11 +170,17 @@ header.post > .hero {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    border-width: 2px;
+    border-width: 4px;
     border-style: solid;
-    border-color: #ff6600;
+    border-color: var(--theme-primary);
     width: 118px;
     height: 118px;
+}
+
+
+.hero.post .author > img {
+  width: 64px;
+  height: 64px;
 }
 
 .hero h5 {
@@ -183,6 +193,13 @@ header.post > .hero {
     display: inline-block;
     padding: 0;
     margin: 18px 0 0 0;
+}
+
+.hero.post .social {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0px 0 0 0;
 }
 
 .hero .social > li {
@@ -233,7 +250,7 @@ article h3 {
 }
 
 article .post-info {
-  color: #bdbdbd;
+  color: var(--faded-text);
   border-top: 1px solid rgba(38,41,58,.1);
   border-bottom: 1px solid rgba(38,41,58,.1);
   padding: 20px 0;
@@ -266,7 +283,7 @@ article .share-buttons > ul > li > a {
 }
 
 article footer {
-  color: #bdbdbd;
+  color: var(--faded-text);
   border-top: 1px solid rgba(38,41,58,.1);
   padding-top: 20px;
 }
@@ -287,24 +304,39 @@ article footer img {
 
 nav.pagination {
   position: relative;
-  padding: 35px;
   margin: 20px 0;
   text-align: center;
 }
 
 nav.pagination .page-number {
   display: inline-block;
-  color: #bdbdbd;
+  height: 45px;
+  color: var(--faded-text);
 }
 
+
 nav.pagination .newer-posts {
-  position: absolute;
-  left: 0;
+  position: relative;
+  width: 164px;
 }
 
 nav.pagination .older-posts {
-  position: absolute;
-  right: 0;
+  position: relative;
+  width: 164px;  
+}
+
+@media screen and (min-width: 580px) {
+  nav.pagination .newer-posts {
+    position: absolute;
+    left: 0;
+    margin-right: 8px;
+  }
+
+  nav.pagination .older-posts {
+    position: absolute;
+    right: 0;
+    margin-left: 8px;
+  }
 }
 
 .read-next {
@@ -355,9 +387,17 @@ nav.pagination .older-posts {
   word-wrap: break-word;
 }
 
+.read-next .prev-story section:before {
+  content: "Previous Post";    
+}
+
+.read-next .next-story section:before {
+  content: "Next Post";
+}
+
 .read-next .prev-story section:before,
 .read-next .next-story section:before {
-  content: "Previous Post";
+
   padding: 6px 10px 5px;
   text-transform: uppercase;
   font-size: 1.1rem;
@@ -371,9 +411,9 @@ nav.pagination .older-posts {
 .prev-story:hover,
 .next-story:hover {
   color: #3c3d47;
-  background: #fff;
+  background: var(--theme-primary);
   transition: all 0.2s ease;
-  border-top: 5px solid #ff6600;
+  border-top: 5px solid var(--theme-primary);
 }
 
 .prev-story:hover section:before,
@@ -385,7 +425,7 @@ nav.pagination .older-posts {
 
 footer.main {
   background-color: #383838;
-  border-top: 4px solid #ff6600;
+  border-top: 4px solid var(--theme-primary);
   color: #fff;
   margin-top: 40px;
   padding: 30px 0;
@@ -407,4 +447,19 @@ footer.main .right {
   float: right;
   margin-bottom: 0;
   font-size: 1.2rem;
+}
+
+ol {
+    margin: 0px 0;
+    padding:0;
+    list-style: decimal inside non;
+    list-style-position: initial;
+}
+
+ol li
+{
+    margin: 0px;
+    padding: px;
+    text-indent: 0.0em;
+    margin-left: 1.4em;
 }
