@@ -475,3 +475,8 @@ ol li {
     text-indent: 0.0em;
     margin-left: 1.4em;
 }
+
+code {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
