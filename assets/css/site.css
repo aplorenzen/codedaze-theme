@@ -49,6 +49,7 @@
 
 .icon-rss:before {
     content: '\e801';
+    font-size: 5rem;
 }
 
 .icon-menu:before {
