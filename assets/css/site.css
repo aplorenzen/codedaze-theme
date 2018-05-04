@@ -235,10 +235,6 @@ article {
     margin: 20px 0;
 }
 
-article h1 {
-    text-align: center;
-}
-
 article h2 {
     margin-top: 50px;
     margin-bottom: 10px;
@@ -480,4 +476,10 @@ ol li {
 code {
     word-wrap: break-word;
     white-space: pre-wrap;
+}
+
+p img {
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, 0%);
 }
