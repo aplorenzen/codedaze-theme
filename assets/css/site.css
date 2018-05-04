@@ -460,17 +460,20 @@ footer.main .right {
 }
 
 ol {
-    margin: 0px 0;
+    margin: 0 0;
     padding: 0;
-    list-style: decimal inside non;
+    list-style: decimal inside none;
     list-style-position: initial;
 }
 
 ol li {
-    margin: 0px;
-    padding: px;
-    text-indent: 0.0em;
-    margin-left: 1.4em;
+    text-indent: 0.0rem;
+    margin-left: 1.4rem;
+    margin-bottom : 0.4rem;
+}
+
+ol li:last-child {
+    margin-bottom: 1em;
 }
 
 code {
